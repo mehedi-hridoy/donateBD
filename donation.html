@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donation History</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 30px;
+            background: white;
+        }
+        .history-card {
+            background: #f4f4f4;;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+    </style>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="color">
+    <button id="blog">Blog</button>
+
+    <div class="donateBd">
+      <img src="/assets/logo.png" id="logo" alt="" />
+      <h3 id="db">Donation History</h3>
+    </div>
+
+    <div class="coin">
+      <img src="/assets/coin.png" id="coin_logo" alt="" />
+      <p><span id="total_amount">5000</span> BDT</p>
+    </div>
+  </nav>
+
+  <main>
+    <div class="buttons d_page">
+      <button class="button" id="donation"><a href="/index.html">Donation</a></button>
+      <button class="button" id="history"><a href="/donation.html">History</a></button>
+    </div>
+  </main>
+    <div id="historyList"></div>
+
+    <script>
+        const history = JSON.parse(localStorage.getItem("donationHistory")) || [];
+        const historyList = document.getElementById("historyList");
+
+        if (history.length === 0) {
+            historyList.innerHTML = "<p>No donation history yet.</p>";
+        } else {
+            history.forEach(entry => {
+                const card = document.createElement("div");
+                card.className = "history-card";
+                card.textContent = entry;
+                historyList.appendChild(card);
+            });
+        }
+    </script>
+</body>
+</html>
