@@ -7,9 +7,11 @@ body {
 }
 
 .color {
-  height: 60px;
+  height: 120px;
   width: 100%;
   background-color: #F9F7F3;
+
+  
 
 }
 
@@ -41,29 +43,33 @@ nav {
 #blog {
   background-color: #B4F461;
   border: none;
-  height: 20px;
+  height: 2em;
   width: 4em;
   border-radius: 5%;
+  font-size: 1.5em;
 
 }
 #logo {
-  height: 1.5em;
+  height: 3em;
 }
 #db {
-  font-size: 1em;
+  font-size: 2em;
 }
 #coin_logo{
-  height: 1em;
+  height: 2em;
 
 }
 
 #total_amount {
-  font-size: 1em;
+  /* font-size: 2em; */
+}
+.coin p {
+  font-size: 2em;
 }
 
 /* main part */
 main {
-  padding: 5em 2em 2em 2em;
+  padding: 5em 20em 5em 20em;
 }
 
 .buttons {
@@ -71,12 +77,12 @@ main {
 
   justify-content: center;
   gap: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
+  padding-top: 100px;
 }
 
 .button {
   border: none;
-  height: 20px;
   width: 5em;
   border-radius: 5%;
   
@@ -84,12 +90,13 @@ main {
 }
 #donation {
   background-color: #B4F461;
-
+  font-size: 1.5em;
 }
 #history {
   background-color: white;
   border: 1px solid #eeece8;
   border-radius: 8%;
+  font-size: 1.5em;
 }
 
 /*cards */
@@ -101,13 +108,18 @@ main {
   justify-content: space-between;
   gap: 1em;
   border-radius: 2%;
+
+  /* height: auto; */
 }
 .left {
   width: 50%;
-  
+  /* aspect-ratio: 16/9; */
+  /* overflow: hidden; */
 }
 .left img {
-  width: 20em
+  width: 30em;
+  /* height: auto; */
+  
 }
 
 .right {
@@ -123,24 +135,24 @@ main {
   /* margin-top: -1em; */
   gap: 0.2em;
   height: 1em;
-  width: 4em;
+  width: 6em;
   padding: 0.3em;
   background-color: rgb(238, 243, 247);
   border-radius: 5%;
 
 }
 #logo_coin {
-  height: 0.8em;
+  height: 1em;
 
 }
 .donated_money {
-  font-size: 0.5em;
+  font-size: 1em;
 }
 .right h3 {
-  font-size: 0.9em;
+  font-size: 1.6em;
 }
 .right p {
-  font-size: 0.6em;
+  font-size: 1em;
 }
 form {
   display: flex;
@@ -149,12 +161,12 @@ form {
 }
 .submit {
   border: none;
-  padding: 0.3em;
+  padding: 0.7em;
   background-color: #B4F461;
   font-weight: bold;
 }
 .placeholder_text {
-  font-size: 0.4em;
+  font-size: 0.7em;
   padding: 1em;
   color: black;
   border: 1px solid #eeece8;
@@ -252,3 +264,14 @@ a {
   text-decoration: none;
   color: black;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 1.2em;
+}
+footer a {
+  color: black;
+  font-weight: bold;
